@@ -10,6 +10,11 @@ load_dotenv()
 # Set up Streamlit page
 st.set_page_config(page_title="EarniFy", layout="centered")
 
+st.set_page_config(
+    page_title="EarniFy",
+    page_icon="💲"
+)
+
 # Initialize session state
 if 'logged_in' not in st.session_state:
     st.session_state.logged_in = False
