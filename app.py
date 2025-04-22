@@ -1,13 +1,8 @@
 import streamlit as st
-from dotenv import load_dotenv
-import os
 from pymongo import MongoClient
 
-# Load environment variables from .env file
-load_dotenv()
-
-# Get URI from environment
-uri = os.getenv("MONGODB_URI")
+# Access MongoDB URI from Streamlit secrets
+uri = st.secrets["MONGODB"]["URI"]
 
 # Safe check
 if not uri:
@@ -33,5 +28,8 @@ st.subheader("Add a New User")
 name = st.text_input("Name")
 email = st.text_input("Email")
 if st.button("Add User"):
-    collection.insert_one({"name": name, "email": email})
-    st.success("User added successfully!")
+    if name and email:
+        collection.insert_one({"name": name, "email": email})
+        st.success("User added successfully!")
+    else:
+        st.warning("Please fill in both the name and email fields.")
