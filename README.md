@@ -1,6 +1,6 @@
 # 💸 EarniFY – Earn Points by Completing Tasks
 
-**EarniFY** is a gamified web platform that allows users to earn points by completing simple online tasks like tapping, watching ads, or interacting with bots. Built using **Streamlit** and **MongoDB** with **PyMongo** for backend storage, it's designed for fun, rewards, and seamless interaction.
+**EarniFY** is a gamified web platform that allows users to earn points by completing simple online tasks like tapping, watching ads, or interacting with bots. Built using **Streamlit** and **MongoDB** with **PyMongo** for backend storage, it's designed for fun, rewards, and seamless interaction. Also with **Sing-in & Sign-up** and saved there data in database
 
 ---
 
